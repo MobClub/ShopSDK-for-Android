@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:text="请选择支付方式"/>
+
+        <TextView
+            android:id="@+id/payCancelAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="取消"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"/>
+
+    <TextView
+        android:id="@+id/payAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"/>
+
+    <RelativeLayout
+        android:id="@+id/aliylayout"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/alipay_icon"
+            android:textColor="#000000"
+            android:drawablePadding="10dp"
+            android:text="支付宝支付"/>
+        <ImageView
+            android:id="@+id/aliyPayIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pay_select_icon"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="#DDDDDD"/>
+
+    <RelativeLayout
+        android:id="@+id/wXlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/wxpay_icon"
+            android:textColor="#000000"
+            android:drawablePadding="10dp"
+            android:text="微信支付"/>
+        <ImageView
+            android:id="@+id/wXPayIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pay_select_icon"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/paySelectFinish"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/shopsdk_default_title_bg"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/shopsdk_default_select_coupon_confirm"
+        android:textSize="18sp"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

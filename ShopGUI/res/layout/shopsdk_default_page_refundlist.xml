@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+	<com.mob.shop.gui.themes.defaultt.components.TitleView
+		android:id="@+id/titleView"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/shopsdk_default_header_height"/>
+
+	<com.mob.tools.gui.PullToRequestView
+		android:id="@+id/listView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:cacheColorHint="#00000000"
+		android:divider="@color/white"
+		android:dividerHeight="0px"/>
+
+</LinearLayout>

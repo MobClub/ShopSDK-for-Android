@@ -1,0 +1,15 @@
+
+ASProj-ShopSDK/.gradle/
+ASProj-ShopSDK/.idea/
+ASProj-ShopSDK/ASProj-ShopSDK.iml
+ASProj-ShopSDK/build/
+Demo/ShopSDK-Demo.iml
+Demo/build
+MobDependency/MobDependency.iml
+MobDependency/build
+ShopGUI/ShopGUI.iml
+ShopGUI/build
+ShopSDK/ShopSDK.iml
+ShopSDK/build
+UMSSDK/UMSSDK.iml
+UMSSDK/build

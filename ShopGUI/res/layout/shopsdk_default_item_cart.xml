@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+
+	>
+
+	<FrameLayout
+		android:id="@+id/flLeft"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_marginLeft="@dimen/shopsdk_default_small_padding">
+
+		<CheckBox
+			android:id="@+id/checkBox"
+			style="@style/checkbox_style"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:checked="false"
+			android:gravity="center_vertical"
+			android:paddingTop="@dimen/shopsdk_default_smaller_padding"
+			android:paddingBottom="@dimen/shopsdk_default_smaller_padding"
+			android:paddingLeft="@dimen/shopsdk_default_smaller_padding"/>
+
+		<TextView
+			android:id="@+id/tvInvalid"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:background="@drawable/shopsdk_default_dot_grey_bg"
+			android:paddingBottom="@dimen/shopsdk_default_least_padding"
+			android:paddingLeft="@dimen/shopsdk_default_smaller_padding"
+			android:paddingRight="@dimen/shopsdk_default_smaller_padding"
+			android:paddingTop="@dimen/shopsdk_default_least_padding"
+			android:text="@string/shopsdk_default_invalid"
+			android:textColor="@color/unselect_tab"
+			android:textSize="@dimen/shopsdk_default_big_least_txt"/>
+	</FrameLayout>
+
+
+	<com.mob.tools.gui.AsyncImageView
+		android:id="@+id/iv"
+		android:layout_width="@dimen/shopsdk_default_cartimg_height"
+		android:layout_height="@dimen/shopsdk_default_cartimg_height"
+		android:layout_centerVertical="true"
+		android:layout_marginBottom="@dimen/shopsdk_default_big_padding"
+		android:layout_marginTop="@dimen/shopsdk_default_big_padding"
+		android:layout_toRightOf="@+id/flLeft"
+		android:scaleType="centerCrop"/>
+
+	<FrameLayout
+		android:id="@+id/fl"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_marginBottom="@dimen/shopsdk_default_big_padding"
+		android:layout_marginLeft="@dimen/shopsdk_default_common_padding"
+		android:layout_marginTop="@dimen/shopsdk_default_big_padding"
+		android:layout_toRightOf="@+id/iv"
+		android:minHeight="@dimen/shopsdk_default_cartimg_height">
+
+		<RelativeLayout
+			android:id="@+id/rlOrder"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="@dimen/shopsdk_default_common_padding"
+			android:layout_toRightOf="@+id/iv"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:id="@+id/ll"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:id="@+id/tvName"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:ellipsize="end"
+					android:lines="2"
+					android:text="【beatssolo3 wireless】Beats Solo3 Wireless 蓝牙无线 头戴式耳机 - 红色 MP162PA/A【行情 报价 价格 评测】"
+					android:textColor="@color/black"
+					android:textSize="@dimen/shopsdk_default_small_txt"/>
+
+			</LinearLayout>
+
+
+			<TextView
+				android:id="@+id/tvAttribute"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/ll"
+				android:layout_marginTop="@dimen/shopsdk_default_small_padding"
+				android:singleLine="true"
+				android:text="红色"
+				android:textColor="@color/unselect_tab"
+				android:textSize="@dimen/shopsdk_default_smaller_txt"/>
+
+
+			<TextView
+				android:id="@+id/tvPrice"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/tvAttribute"
+				android:layout_gravity="center_vertical"
+				android:layout_marginTop="@dimen/shopsdk_default_smaller_padding"
+				android:text="￥2888"
+				android:textColor="@color/orange_price"
+				android:textSize="@dimen/shopsdk_default_big_txt"/>
+
+			<TextView
+				android:id="@+id/tvCount"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignBottom="@+id/tvPrice"
+				android:layout_alignParentRight="true"
+				android:layout_marginLeft="@dimen/shopsdk_default_common_padding"
+				android:singleLine="true"
+				android:text="x1"
+				android:textColor="@color/unselect_tab"
+				android:textSize="@dimen/shopsdk_default_small_txt"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/llEdit"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minHeight="@dimen/shopsdk_default_cartimg_height"
+			android:paddingBottom="@dimen/shopsdk_default_small_big_padding"
+			android:paddingRight="@dimen/shopsdk_default_big_padding"
+			android:visibility="visible">
+
+			<com.mob.shop.gui.themes.defaultt.components.CountView
+				android:id="@+id/countView"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				/>
+
+			<TextView
+				android:id="@+id/sAttribute"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:drawablePadding="@dimen/shopsdk_default_common_padding"
+				android:drawableRight="@drawable/shopsdk_default_down"
+				android:singleLine="true"
+				android:text="颜色：红色"
+				android:textColor="@color/unselect_tab"
+				android:textSize="@dimen/shopsdk_default_smaller_txt"
+				/>
+
+		</RelativeLayout>
+
+	</FrameLayout>
+
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:layout_alignLeft="@+id/fl"
+		android:layout_alignParentBottom="true"
+		android:background="@color/grey_line"/>
+</RelativeLayout>

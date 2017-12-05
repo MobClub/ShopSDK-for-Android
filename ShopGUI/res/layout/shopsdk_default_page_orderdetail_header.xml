@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/shopsdk_default_title_bg"
+		android:paddingLeft="@dimen/shopsdk_default_small_big_padding"
+		android:paddingRight="@dimen/shopsdk_default_small_big_padding"
+		android:paddingTop="@dimen/shopsdk_default_common_padding"
+		android:paddingBottom="@dimen/shopsdk_default_small_big_padding">
+
+		<LinearLayout
+			android:id="@+id/llStatus"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical"
+			android:orientation="horizontal">
+
+			<ImageView
+				android:id="@+id/ivStatus"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/shopsdk_default_waiting"/>
+
+			<TextView
+				android:id="@+id/tvStatus"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/shopsdk_default_smaller_padding"
+				android:text="@string/shopsdk_default_unpay_order"
+				android:textColor="@color/white"
+				android:textSize="@dimen/shopsdk_default_title_txt"/>
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/tvTimeCount"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/llStatus"
+			android:layout_marginBottom="@dimen/shopsdk_default_coupon_top"
+			android:layout_marginTop="@dimen/shopsdk_default_smaller_padding"
+			android:text="@string/shopsdk_default_count_down"
+			android:textColor="@color/white"
+			android:textSize="@dimen/shopsdk_default_smaller_txt"/>
+	</RelativeLayout>
+
+	<com.mob.shop.gui.themes.defaultt.components.OrderShippingAddressView
+		android:id="@+id/shippingAddressView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"/>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/shopsdk_default_common_padding"
+		android:background="@color/grey_space"/>
+</LinearLayout>

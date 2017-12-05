@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">ShopDemo</string>
+	<string name="goto_shop_a">匿名进入商城</string>
+	<string name="goto_shop_u">非匿名进入商城</string>
+</resources>

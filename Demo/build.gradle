@@ -1,0 +1,219 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion findCompileSdkVersion()
+    buildToolsVersion findBuildTools()
+
+    defaultConfig {
+        minSdkVersion findMinSdkVersionFromManifest()
+        targetSdkVersion findTargetSdkVersionFromManifest()   //target SdkVersion >= 23 make miui crash
+        versionCode findVersionCode()
+        versionName findVersionName()
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+    }
+
+    signingConfigs{
+        debug {
+            storeFile file("../ASProj-ShopSDK/demokey.keystore")
+            storePassword "123456"
+            keyAlias "demokey.keystore"
+            keyPassword "123456"
+        }
+        release {
+            storeFile file("../ASProj-ShopSDK/demokey.keystore")
+            storePassword "123456"
+            keyAlias "demokey.keystore"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            signingConfig signingConfigs.release
+        }
+    }
+    lintOptions {
+        disable 'InconsistentArrays','OldTargetApi','GradleOverrides','MissingTranslation','UnusedResources','GoogleAppIndexingWarning'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+}
+
+dependencies {
+    // 若使用GUI，添加此依赖（不再需要单独添加ShopSDK的依赖）
+    compile project(':ShopGUI')
+    // 若不使用GUI，添加此依赖（不再需要添加ShopGUI的依赖）
+    // compile project(':ShopSDK')
+    // 若使用UMSSDK作为帐号系统，添加此依赖（UMSSDK请至Mob官网下载）
+    compile project(':UMSSDK')
+}
+
+int findCompileSdkVersion() {
+    def projProp = new File(project.projectDir, "project.properties")
+    if (projProp.exists()) {
+        def properties = new Properties()
+        projProp.withInputStream {
+            instr->properties.load(instr)
+        }
+        def target = properties.getProperty('target').trim()
+        def pref = "android-"
+        if (target != null && target.startsWith(pref)) {
+            try {
+                return Integer.parseInt(target.substring(pref.length()))
+            } catch (Throwable t) {
+                return 25;
+            }
+        }
+    }
+}
+
+String findBuildTools() {
+    def sdkDir
+    def localProperties = new File(project.rootDir, "local.properties")
+    if (localProperties.exists()) {
+        Properties properties = new Properties()
+        localProperties.withInputStream {
+            instr->properties.load(instr)
+        }
+        sdkDir = properties.getProperty('sdk.dir')
+    }
+    if (sdkDir == null) {
+        sdkDir = System.env.ANDROID_HOME
+    }
+    println "sdkDir=" + sdkDir
+    if (sdkDir != null) {
+        def buildTools = new File(sdkDir, "build-tools")
+        if (buildTools.exists()) {
+            def tools = buildTools.list()
+            if (tools != null) {
+                Arrays.sort(tools)
+                return tools[tools.length - 1]
+            }
+        }
+    }
+    return "25.0.2"
+}
+
+int findMinSdkVersionFromManifest() {
+    def file = new File(projectDir, "AndroidManifest.xml")
+    def xml = new XmlSlurper()
+    def manifest = xml.parse(file)
+    try {
+        def tmpValue = manifest.getAt("uses-sdk").getProperty('@android:minSdkVersion').toString()
+        return Integer.parseInt(tmpValue)
+    } catch (Throwable t) {
+        return findMinSdkVersionFromLocalSdkPath()
+    }
+}
+
+int findMinSdkVersionFromLocalSdkPath() {
+    def sdkDir = System.env.ANDROID_HOME;
+    def lowerLimit = 8
+    if(sdkDir == null) {
+        def localProperties = new File(project.rootDir, "local.properties")
+        if (localProperties.exists()) {
+            Properties properties = new Properties()
+            localProperties.withInputStream {
+                instr->properties.load(instr)
+            }
+            sdkDir = properties.getProperty('sdk.dir')
+        }
+    }
+    if (sdkDir != null) {
+        def platforms = new File(sdkDir, "platforms")
+        if (platforms.exists()) {
+            def existedPlatforms = platforms.list()
+            if (existedPlatforms != null) {
+                def pref = "android-"
+                def arr = new int[existedPlatforms.length]
+                for (int i = 0; i < existedPlatforms.length; i ++) {
+                    if (existedPlatforms[i] != null && existedPlatforms[i].startsWith(pref)) {
+                        arr[i] = Integer.parseInt(existedPlatforms[i].substring(pref.length()))
+                    }
+                }
+                Arrays.sort(arr)
+                return (arr[0] >= lowerLimit ? arr[0] : lowerLimit)
+            }
+        }
+    }
+}
+
+int findTargetSdkVersionFromManifest() {
+    def file = new File(projectDir, "AndroidManifest.xml")
+    def xml = new XmlSlurper()
+    def manifest = xml.parse(file)
+    try {
+        def tmpValue = manifest.getAt("uses-sdk").getProperty('@android:targetSdkVersion').toString()
+        return Integer.parseInt(tmpValue)
+    } catch (Throwable t) {
+       return findTargetSdkVersionFromLocalSdkPath()
+    }
+}
+
+int findTargetSdkVersionFromLocalSdkPath() {
+    def sdkDir = System.env.ANDROID_HOME;
+    def upperLimit = 25
+    if(sdkDir == null) {
+        def localProperties = new File(project.rootDir, "local.properties")
+        if (localProperties.exists()) {
+            Properties properties = new Properties()
+            localProperties.withInputStream {
+                instr->properties.load(instr)
+            }
+            sdkDir = properties.getProperty('sdk.dir')
+        }
+    }
+    if (sdkDir != null) {
+        def platforms = new File(sdkDir, "platforms")
+        if (platforms.exists()) {
+            def existedPlatforms = platforms.list()
+            if (existedPlatforms != null) {
+                def pref = "android-"
+                def arr = new int[existedPlatforms.length]
+                for (int i = 0; i < existedPlatforms.length; i ++) {
+                    if (existedPlatforms[i] != null && existedPlatforms[i].startsWith(pref)) {
+                        arr[i] = Integer.parseInt(existedPlatforms[i].substring(pref.length()))
+                    }
+                }
+                Arrays.sort(arr)
+                return (arr[arr.length - 1] <= upperLimit ? arr[arr.length - 1] : upperLimit)
+            }
+        }
+    }
+}
+
+int findVersionCode() {
+    def versionCode = 0
+    findVersionName().split("\\.").each { v ->
+        versionCode = versionCode * 100 + Integer.parseInt(v)
+    }
+    return versionCode == 0 ? 17 : versionCode
+}
+
+String findVersionName() {
+    def versionName = "1.0.0"
+    def libs = new File(projectDir, "../ShopSDK/libs")
+    libs.list().each { name ->
+        def upName = name.toUpperCase()
+        if (upName.startsWith("ShopSDK-") && upName.endsWith(".JAR")) {
+            versionName = name.substring("ShopSDK-".length(), name.length() - ".JAR".length())
+            return
+        }
+    }
+    return versionName
+}

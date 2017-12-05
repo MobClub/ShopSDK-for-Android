@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@android:color/white">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/tvAll"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+			android:layout_marginRight="@dimen/shopsdk_default_big_padding"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:paddingBottom="@dimen/shopsdk_default_big_padding"
+			android:paddingTop="@dimen/shopsdk_default_big_padding"
+			android:text="@string/shopsdk_default_all"
+			android:textColor="@color/title_black"
+			android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+		<TextView
+			android:id="@+id/tvUnpay"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+			android:layout_marginRight="@dimen/shopsdk_default_big_padding"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:paddingBottom="@dimen/shopsdk_default_big_padding"
+			android:paddingTop="@dimen/shopsdk_default_big_padding"
+			android:text="@string/shopsdk_default_unpay_order"
+			android:textColor="@color/title_black"
+			android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+		<TextView
+			android:id="@+id/tvUnsend"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+			android:layout_marginRight="@dimen/shopsdk_default_big_padding"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:paddingBottom="@dimen/shopsdk_default_big_padding"
+			android:paddingTop="@dimen/shopsdk_default_big_padding"
+			android:text="@string/shopsdk_default_unSeed_order"
+			android:textColor="@color/title_black"
+			android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+		<TextView
+			android:id="@+id/tvUnshipping"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+			android:layout_marginRight="@dimen/shopsdk_default_big_padding"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:paddingBottom="@dimen/shopsdk_default_big_padding"
+			android:paddingTop="@dimen/shopsdk_default_big_padding"
+			android:text="@string/shopsdk_default_unShipping_order"
+			android:textColor="@color/title_black"
+			android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+		<TextView
+			android:id="@+id/tvCompleted"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+			android:layout_marginRight="@dimen/shopsdk_default_big_padding"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:paddingBottom="@dimen/shopsdk_default_big_padding"
+			android:paddingTop="@dimen/shopsdk_default_big_padding"
+			android:text="@string/shopsdk_default_completed_order"
+			android:textColor="@color/title_black"
+			android:textSize="@dimen/shopsdk_default_common_txt"/>
+	</LinearLayout>
+
+	<View
+		android:id="@+id/indicatorLine"
+		android:layout_width="match_parent"
+		android:layout_height="2dp"
+		android:layout_gravity="bottom"
+		android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+		android:background="@color/select_tab"/>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:layout_gravity="bottom"
+		android:background="@color/grey_line"/>
+</FrameLayout>

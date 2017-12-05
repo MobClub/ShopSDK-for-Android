@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1">
+
+
+		<com.mob.shop.gui.themes.defaultt.components.DetailScrollView
+			android:id="@+id/detailScrollView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/white"
+			android:scrollbars="none">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+
+				<FrameLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<com.mob.tools.gui.MobViewPager
+						android:id="@+id/ImgPager"
+						android:layout_width="match_parent"
+						android:layout_height="350dp"
+						android:background="@color/order_bg">
+					</com.mob.tools.gui.MobViewPager>
+
+					<LinearLayout
+						android:id="@+id/llDot"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="bottom|center_horizontal"
+						android:layout_marginBottom="@dimen/shopsdk_default_common_padding"
+						android:gravity="center_vertical"
+						android:orientation="horizontal"/>
+
+					<ImageView
+						android:id="@+id/ivBack"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="@dimen/shopsdk_default_common_padding"
+						android:src="@drawable/shopsdk_default_bg_back"/>
+				</FrameLayout>
+
+
+				<TextView
+					android:id="@+id/detailgoodName"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/shopsdk_default_smaller_padding"
+					android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+					android:layout_marginRight="@dimen/shopsdk_default_big_padding"
+					android:layout_marginTop="@dimen/shopsdk_default_big_padding"
+					android:ellipsize="end"
+					android:lines="2"
+					android:textColor="@color/black"
+					android:textSize="@dimen/shopsdk_default_small_txt"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+					android:layout_marginRight="@dimen/shopsdk_default_big_padding"
+					android:orientation="horizontal">
+
+					<TextView
+						android:id="@+id/tvMinPriceKey"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="￥"
+						android:textColor="@color/orange_price"
+						android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+					<TextView
+						android:id="@+id/tvMinPrice"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="0"
+						android:textColor="@color/orange_price"
+						android:textSize="@dimen/shopsdk_default_au_money_txt"/>
+
+					<TextView
+						android:id="@+id/tvPriceSpace"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/shopsdk_default_smaller_padding"
+						android:layout_marginRight="@dimen/shopsdk_default_smaller_padding"
+						android:text="~"
+						android:textColor="@color/orange_price"
+						android:textSize="@dimen/shopsdk_default_big_txt"/>
+
+					<TextView
+						android:id="@+id/tvMaxPriceKey"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="￥"
+						android:textColor="@color/orange_price"
+						android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+					<TextView
+						android:id="@+id/tvMaxPrice"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="0"
+						android:textColor="@color/orange_price"
+						android:textSize="@dimen/shopsdk_default_au_money_txt"/>
+				</LinearLayout>
+
+				<TextView
+					android:id="@+id/detailbuyers"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/shopsdk_default_big_padding"
+					android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+					android:layout_marginRight="@dimen/shopsdk_default_big_padding"
+					android:layout_marginTop="@dimen/shopsdk_default_small_padding"
+					android:textColor="@color/unselect_tab"
+					android:textSize="@dimen/shopsdk_default_smaller_txt"/>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/shopsdk_default_common_padding"
+					android:background="@color/grey_space"/>
+
+				<LinearLayout
+					android:id="@+id/detailselecte"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+					android:layout_marginRight="@dimen/shopsdk_default_big_padding"
+					android:orientation="horizontal"
+					android:paddingBottom="@dimen/shopsdk_default_big_padding"
+					android:paddingTop="@dimen/shopsdk_default_big_padding">
+
+					<TextView
+						android:id="@+id/tvDetailSelecte"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="@string/shopsdk_default_select_product_model"
+						android:textColor="@color/black"
+						android:textSize="@dimen/shopsdk_default_small_txt"/>
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/shopsdk_default_common_padding"
+						android:src="@drawable/shopsdk_default_more"/>
+				</LinearLayout>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/shopsdk_default_common_padding"
+					android:background="@color/grey_space"/>
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+					android:layout_marginRight="@dimen/shopsdk_default_big_padding"
+					>
+
+					<TextView
+						android:id="@+id/tvAppraiseKey"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerVertical="true"
+						android:text="@string/shopsdk_default_evaluate"
+						android:textColor="@color/black"
+						android:textSize="@dimen/shopsdk_default_small_txt"/>
+
+					<TextView
+						android:id="@+id/tvGoodRate"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerVertical="true"
+						android:layout_marginLeft="@dimen/shopsdk_default_common_padding"
+						android:layout_toRightOf="@+id/tvAppraiseKey"
+						android:background="@drawable/shopsdk_default_round_red_bg"
+						android:padding="@dimen/shopsdk_default_least_padding"
+						android:text="@string/shopsdk_default_good_appraise"
+						android:textColor="@color/select_tab"
+						android:textSize="9sp"/>
+
+					<TextView
+						android:id="@+id/tvSeeMore"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignParentRight="true"
+						android:paddingBottom="@dimen/shopsdk_default_big_padding"
+						android:paddingLeft="@dimen/shopsdk_default_common_padding"
+						android:paddingTop="@dimen/shopsdk_default_big_padding"
+						android:text="@string/shopsdk_default_see_more"
+						android:textColor="@color/black"
+						android:textSize="@dimen/shopsdk_default_smaller_txt"/>
+
+				</RelativeLayout>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:background="@color/grey_space"/>
+
+				<com.mob.shop.gui.themes.defaultt.components.ExactListView
+					android:id="@+id/appraiseListView"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:divider="@color/transparent"
+					android:dividerHeight="0dp"/>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/shopsdk_default_common_padding"
+					android:background="@color/grey_space"/>
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+					android:paddingBottom="@dimen/shopsdk_default_big_padding"
+					android:paddingTop="@dimen/shopsdk_default_big_padding"
+					android:text="@string/shopsdk_default_product_detail"
+					android:textColor="@color/black"
+					android:textSize="@dimen/shopsdk_default_smaller_txt"/>
+
+				<LinearLayout
+					android:id="@+id/detailImgs"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"></LinearLayout>
+			</LinearLayout>
+		</com.mob.shop.gui.themes.defaultt.components.DetailScrollView>
+
+		<com.mob.shop.gui.themes.defaultt.components.TitleView
+			android:id="@+id/titleView"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/shopsdk_default_header_height"/>
+	</FrameLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:background="@color/grey_line"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="45dp"
+		android:background="@color/white"
+		android:orientation="horizontal"
+		>
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:orientation="vertical"
+			android:paddingLeft="@dimen/shopsdk_default_big_padding"
+			android:paddingRight="@dimen/shopsdk_default_big_padding">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/shopsdk_default_kf"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/shopsdk_default_kf"
+				android:textColor="@color/unselect_tab"
+				android:textSize="9sp"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/llCart"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:orientation="vertical"
+			android:paddingLeft="@dimen/shopsdk_default_big_padding"
+			android:paddingRight="@dimen/shopsdk_default_big_padding">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/shopsdk_default_grey_cart"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/shopsdk_default_cart"
+				android:textColor="@color/unselect_tab"
+				android:textSize="9sp"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:background="@drawable/shopsdk_default_title_bg"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/tvNowBuy"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/shopsdk_default_now_buy"
+				android:textColor="@color/white"
+				android:textSize="@dimen/shopsdk_default_small_big_txt"/>
+
+			<View
+				android:layout_width="1dp"
+				android:layout_height="match_parent"
+				android:background="@color/white"/>
+
+			<TextView
+				android:id="@+id/tvAddCart"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/shopsdk_default_add_cart"
+				android:textColor="@color/white"
+				android:textSize="@dimen/shopsdk_default_small_big_txt"/>
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>

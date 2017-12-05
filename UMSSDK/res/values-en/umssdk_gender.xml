@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="umssdk_gender_female">Female</string>
+	<string name="umssdk_gender_male">Male</string>
+	<string name="umssdk_gender_secret">Secret</string>
+</resources>

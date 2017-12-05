@@ -1,0 +1,18 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:background="@drawable/shopsdk_default_main_payresult_dialog">
+
+    <TextView
+        android:id="@+id/tv_payresult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="支付失败"
+        android:textColor="#000000"
+        android:textSize="15dp"/>
+
+</RelativeLayout>

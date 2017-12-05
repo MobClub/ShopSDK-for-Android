@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="shopsdk_default_cartimg_height">84dp</dimen>
+	<dimen name="shopsdk_default_header_height">45dp</dimen>
+	<dimen name="shopsdk_default_order_height">60dp</dimen>
+	<dimen name="shopsdk_default_cartadd_height">30dp</dimen>
+	<dimen name="shopsdk_default_mine_logo">71dp</dimen>
+
+	<dimen name="shopsdk_default_mine_name">18dp</dimen>
+	<dimen name="shopsdk_default_mine_top">16dp</dimen>
+	<dimen name="shopsdk_default_coupon_top">20dp</dimen>
+
+
+	<dimen name="shopsdk_default_bigest_padding">30dp</dimen>
+	<dimen name="shopsdk_default_biger_padding">25dp</dimen>
+	<dimen name="shopsdk_default_big_padding">15dp</dimen>
+	<dimen name="shopsdk_default_small_big_padding">12dp</dimen>
+	<dimen name="shopsdk_default_common_padding">10dp</dimen>
+	<dimen name="shopsdk_default_small_padding">8dp</dimen>
+	<dimen name="shopsdk_default_smaller_padding">5dp</dimen>
+	<dimen name="shopsdk_default_least_padding">3dp</dimen>
+
+
+	<dimen name="shopsdk_default_common_txt">14sp</dimen>
+	<dimen name="shopsdk_default_small_txt">13sp</dimen>
+	<dimen name="shopsdk_default_smaller_txt">12sp</dimen>
+	<dimen name="shopsdk_default_least_txt">11sp</dimen>
+	<dimen name="shopsdk_default_big_least_txt">8sp</dimen>
+	<dimen name="shopsdk_default_biger_txt">18sp</dimen>
+	<dimen name="shopsdk_default_title_txt">16sp</dimen>
+	<dimen name="shopsdk_default_big_txt">17sp</dimen>
+	<dimen name="shopsdk_default_small_big_txt">15sp</dimen>
+	<dimen name="shopsdk_default_au_money_txt">20sp</dimen>
+
+	<dimen name="shopsdk_default_refund_detail_content_text_size">12sp</dimen>
+	<dimen name="shopsdk_default_refund_detail_common_label_width">70dp</dimen>
+	<dimen name="shopsdk_default_refund_detail_common_tv_margin_left">5dp</dimen>
+	<dimen name="shopsdk_default_refund_detail_content_padding_left_right">15dp</dimen>
+	<dimen name="shopsdk_default_refund_detail_content_padding_top_bottom">15dp</dimen>
+</resources>

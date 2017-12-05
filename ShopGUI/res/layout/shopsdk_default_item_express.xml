@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+
+	<LinearLayout
+		android:layout_width="17dp"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+		android:gravity="center_horizontal"
+		android:orientation="vertical">
+
+		<ImageView
+			android:id="@+id/iv"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/shopsdk_default_express_grey"/>
+
+		<TextView
+			android:layout_width="1dp"
+			android:layout_height="match_parent"
+			android:background="@color/grey_line"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+		android:layout_weight="1"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/tvDes"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/shopsdk_default_common_padding"
+			android:layout_marginTop="-5dp"
+			android:textColor="@color/unselect_tab"
+			android:textSize="@dimen/shopsdk_default_small_txt"
+			/>
+
+		<TextView
+			android:id="@+id/tvTime"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/shopsdk_default_bigest_padding"
+			android:textColor="@color/unselect_tab"
+			android:textSize="@dimen/shopsdk_default_small_txt"
+			/>
+	</LinearLayout>
+
+</LinearLayout>

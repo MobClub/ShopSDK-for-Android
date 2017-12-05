@@ -1,0 +1,19 @@
+// Demo
+include ':ShopSDK-Demo'
+project(':ShopSDK-Demo').projectDir = new File('../Demo')
+
+// Demo：Demo需要UMS的登录功能
+include ':UMSSDK'
+project(':UMSSDK').projectDir = new File('../UMSSDK')
+
+// Optional：需根据自己的目录结构填写对应路径，若不使用GUI，则不需此配置
+include ':ShopGUI'
+project(':ShopGUI').projectDir = new File('../ShopGUI')
+
+// Required：需根据自己的目录结构填写对应路径
+include ':ShopSDK'
+project(':ShopSDK').projectDir = new File('../ShopSDK')
+
+// Required：需根据自己的目录结构填写对应路径
+include ':MobDependency'
+project(':MobDependency').projectDir = new File('../MobDependency')

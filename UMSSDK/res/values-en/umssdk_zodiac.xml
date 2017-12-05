@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="umssdk_zodiac_dog">Dog</string>
+	<string name="umssdk_zodiac_dragon">Dragon</string>
+	<string name="umssdk_zodiac_goat">Goat</string>
+	<string name="umssdk_zodiac_horse">Horse</string>
+	<string name="umssdk_zodiac_monkey">Monkey</string>
+	<string name="umssdk_zodiac_ox">Ox</string>
+	<string name="umssdk_zodiac_pig">Pig</string>
+	<string name="umssdk_zodiac_rabbit">Rabbit</string>
+	<string name="umssdk_zodiac_rat">Rat</string>
+	<string name="umssdk_zodiac_rooster">Rooster</string>
+	<string name="umssdk_zodiac_snake">Snake</string>
+	<string name="umssdk_zodiac_tiger">Tiger</string>
+</resources>

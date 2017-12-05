@@ -1,0 +1,2 @@
+# for ShopGUI
+-keep class com.mob.shop.gui.** {*;}

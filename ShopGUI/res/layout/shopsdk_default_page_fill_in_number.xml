@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginLeft="14dp"
+              android:layout_marginRight="14dp"
+              android:orientation="vertical"
+              android:background="#F7F7F7">
+
+    <com.mob.shop.gui.themes.defaultt.components.TitleView
+        android:id="@+id/expressTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shopsdk_default_header_height"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="退单申请成功，请填写快递信息"
+        android:textColor="#999999"
+        android:textSize="18sp"/>
+
+    <RelativeLayout
+        android:id="@+id/selecteExpress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/titleleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:text="承运方"/>
+
+        <TextView
+            android:id="@+id/shipperName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/titleleft"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:hint="请选择物流公司"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shopsdk_default_more"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddddd"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="12dp"
+            android:textColor="#000000"
+            android:layout_gravity="center_vertical"
+            android:text="快递单号"/>
+
+        <EditText
+            android:id="@+id/expressNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"
+            android:lines="1"
+            android:hint="请输入快递单号"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/expressRefundSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shopsdk_default_title_bg"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/shopsdk_default_select_coupon_confirm"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

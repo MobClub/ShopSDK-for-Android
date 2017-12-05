@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/grey_space"
+              android:orientation="vertical">
+
+	<com.mob.shop.gui.themes.defaultt.components.TitleView
+		android:id="@+id/titleView"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/shopsdk_default_header_height"/>
+
+	<ListView
+		android:id="@+id/listView"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_marginTop="-1dp"
+		android:layout_weight="1"
+		android:background="@color/white"
+		android:cacheColorHint="#00000000"
+		android:divider="@color/transparent"
+		android:dividerHeight="1px"
+		android:listSelector="#00000000"
+		android:scrollbars="none"/>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:background="@color/grey_line"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:paddingBottom="@dimen/shopsdk_default_small_padding"
+		android:paddingLeft="@dimen/shopsdk_default_big_padding"
+		android:paddingRight="@dimen/shopsdk_default_big_padding"
+		android:paddingTop="@dimen/shopsdk_default_small_padding">
+
+		<TextView
+			android:id="@+id/tvActualMoneyKey"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:text="@string/shopsdk_default_actual_money"
+			android:textColor="@color/black"
+			android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+		<TextView
+			android:id="@+id/tvActualMoney"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="@dimen/shopsdk_default_smaller_padding"
+			android:layout_toRightOf="@+id/tvActualMoneyKey"
+			android:text="￥200"
+			android:textColor="@color/select_tab"/>
+		<com.mob.shop.gui.themes.defaultt.components.OrderActionView
+			android:id="@+id/orderActionView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"/>
+	</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+	<com.mob.shop.gui.themes.defaultt.components.OrderShippingAddressView
+		android:id="@+id/orderShippingAddressView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"/>
+
+	<LinearLayout
+		android:id="@+id/llAdd"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:gravity="center_vertical"
+		android:orientation="horizontal"
+		android:padding="@dimen/shopsdk_default_big_padding">
+
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/shopsdk_default_add_shipaddress"/>
+
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/shopsdk_default_common_padding"
+			android:layout_marginRight="@dimen/shopsdk_default_common_padding"
+			android:layout_weight="1"
+			android:text="@string/shopsdk_default_add_shippingaddress"
+			android:textColor="@color/black"
+			android:textSize="@dimen/shopsdk_default_small_txt"/>
+
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/shopsdk_default_more"/>
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="10dp"
+		android:background="@color/grey_space"/>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Toolbar">
+        <attr format="reference" name="titleTextAppearance"/>
+        <attr format="reference" name="subtitleTextAppearance"/>
+        <attr name="android:gravity"/>
+        <attr format="dimension" name="titleMargins"/>
+        <attr format="dimension" name="titleMarginStart"/>
+        <attr format="dimension" name="titleMarginEnd"/>
+        <attr format="dimension" name="titleMarginTop"/>
+        <attr format="dimension" name="titleMarginBottom"/>
+        <attr format="dimension" name="maxButtonHeight"/>
+        <attr format="reference" name="collapseIcon"/>
+        <attr format="string" name="collapseContentDescription"/>
+       <!--这里可以修改ToolBar除了PopupMenu的所有信息（如背景色：注意java代码中的setBackgroundColor这个方法不要用存在bug！！！效果不好，使用这里的background属性进行设置） 设置的值可以参考主题ThemeOverlay.AppCompat.Dark.ActionBar-->
+        <!--这里只能修改由ToolBar创建的弹出菜单，而对于自己通过创建PopupMenu对象显示的只能通过对context设置对应的主题进行设置，设置的值可以参考ThemeOverlay.AppCompat.Light-->
+        <attr format="reference" name="navigationIcon"/>
+        <attr format="string" name="navigationContentDescription"/>
+        <attr name="android:minHeight"/>
+        <attr format="string" name="logoDescription"/>
+        <attr format="color" name="titleTextColor"/>
+        <attr format="color" name="subtitleTextColor"/>
+        <attr format="dimension" name="contentInsetStartWithNavigation"/>
+        <attr format="dimension"  name="contentInsetEndWithActions"/>
+        <attr format="integer" name="gravity"/>
+        <attr format="integer" name="buttonGravity"/>
+        <attr format="dimension" name="titleMargin"/>
+        <attr format="reference"   name="navigationButtonStyle"/>
+    </declare-styleable>
+</resources>

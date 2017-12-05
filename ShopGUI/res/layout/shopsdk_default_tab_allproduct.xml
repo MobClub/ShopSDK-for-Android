@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/main_holder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/shopsdk_default_header_height"
+            android:background="@drawable/shopsdk_default_title_bg">
+
+            <com.mob.shop.gui.themes.defaultt.components.searchbar.MainSearchBar
+                android:id="@+id/main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+					android:id="@+id/shopsdk_all_product_search_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="14dp"
+                    android:drawableLeft="@drawable/ic_action_search"
+                    android:drawablePadding="6dp"
+                    android:hint="@string/product_search_txt"
+                    android:textSize="@dimen/shopsdk_default_small_txt"
+					android:textColorHint="@color/white"
+					android:textColor="@color/white"/>
+            </com.mob.shop.gui.themes.defaultt.components.searchbar.MainSearchBar>
+        </FrameLayout>
+
+        <include layout="@layout/shopsdk_default_tab_all_detail"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f0f0f0"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:background="#f0f0f0">
+
+            <com.mob.tools.gui.PullToRequestView
+                android:id="@+id/shopsdk_tab_all_product_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/white"
+                android:dividerHeight="4dp"
+                android:scrollbars="none"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

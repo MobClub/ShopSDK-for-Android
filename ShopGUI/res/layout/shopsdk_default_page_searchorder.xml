@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+	<com.mob.shop.gui.themes.defaultt.components.searchbar.SearchBar
+		android:id="@+id/searchBar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+			android:text="@string/shopsdk_default_history"
+			android:textColor="@color/unselect_tab"
+			android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+		<ImageView
+			android:id="@+id/ivDelete"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:padding="@dimen/shopsdk_default_big_padding"
+			android:src="@drawable/shopsdk_default_delete"/>
+	</RelativeLayout>
+
+	<com.mob.shop.gui.themes.defaultt.components.CollspanBarTitle
+		android:id="@+id/history"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:normal_textColor="@color/black"
+		app:itemTextSize="@dimen/shopsdk_default_small_txt"
+		app:verPadding="@dimen/shopsdk_default_small_padding"
+		app:horInterval="@dimen/shopsdk_default_common_padding"
+		app:horPadding="@dimen/shopsdk_default_big_padding"
+		app:normal_drawable="@drawable/shopsdk_default_dot_grey_bg"
+		android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+		android:layout_marginRight="@dimen/shopsdk_default_big_padding"/>
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/llTab"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="vertical"
+	>
+
+	<ImageView
+		android:id="@+id/ivTab"
+		android:layout_width="24dp"
+		android:layout_height="24dp"
+		android:src="@drawable/shopsdk_default_tab_profile_unsel"/>
+
+	<TextView
+		android:id="@+id/tvTab"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/shopsdk_default_cart"
+		android:textColor="@color/unselect_tab"
+		android:textSize="@dimen/shopsdk_default_least_txt"/>
+</LinearLayout>

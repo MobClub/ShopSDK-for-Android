@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="white">#FFFFFF</color>
+	<color name="grey_line">#edeff3</color>
+	<color name="unselect_tab">#999999</color>
+	<color name="select_tab">#f6573b</color>
+	<color name="title_black">#505050</color>
+	<color name="transparent">#00000000</color>
+	<color name="orange">#DE4A34</color>
+	<color name="orange_light">#FB7E41</color>
+	<color name="black">#000000</color>
+	<color name="grey_space">#F7F7F7</color>
+	<color name="orange_price">#F6573B</color>
+	<color name="mine_grey_line">#efefef</color>
+	<color name="order_bg">#fafafa</color>
+	<color name="filt_bottom_bg">#f9f9f9</color>
+</resources>

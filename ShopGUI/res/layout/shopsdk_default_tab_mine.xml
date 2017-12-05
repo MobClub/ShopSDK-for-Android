@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/grey_space"
+              android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="115dp"
+		android:background="@drawable/shopsdk_default_mine_bg"
+		android:orientation="vertical"
+		android:paddingBottom="@dimen/shopsdk_default_coupon_top"
+		>
+
+		<ImageView
+			android:id="@+id/ivSetting"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right"
+			android:layout_marginRight="@dimen/shopsdk_default_smaller_padding"
+			android:padding="@dimen/shopsdk_default_least_padding"
+			android:src="@drawable/shopsdk_default_setting"
+			android:visibility="invisible"/>
+
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical"
+			android:orientation="horizontal">
+
+			<com.mob.shop.gui.themes.defaultt.components.RollImageView
+				android:id="@+id/ivLogo"
+				android:layout_width="@dimen/shopsdk_default_mine_logo"
+				android:layout_height="@dimen/shopsdk_default_mine_logo"
+				android:layout_marginLeft="@dimen/shopsdk_default_small_big_padding"
+				android:layout_marginRight="@dimen/shopsdk_default_big_padding"/>
+
+			<TextView
+				android:id="@+id/tvNickName"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:drawablePadding="@dimen/shopsdk_default_big_padding"
+				android:drawableRight="@drawable/shopsdk_default_white_more"
+				android:text="@string/shopsdk_default_nickname"
+				android:textColor="@color/white"
+				android:textSize="@dimen/shopsdk_default_small_big_txt"/>
+		</LinearLayout>
+
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:orientation="horizontal"
+		android:paddingBottom="16dp"
+		android:paddingTop="@dimen/shopsdk_default_smaller_padding">
+
+		<RelativeLayout
+			android:id="@+id/rlUnPay"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1">
+
+			<ImageView
+				android:id="@+id/ivUnPay"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_margin="@dimen/shopsdk_default_small_padding"
+				android:padding="@dimen/shopsdk_default_smaller_padding"
+				android:src="@drawable/shopsdk_default_unpay"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/ivUnPay"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="@dimen/shopsdk_default_least_padding"
+				android:text="@string/shopsdk_default_unpay_order"
+				android:textColor="@color/black"
+				android:textSize="@dimen/shopsdk_default_smaller_txt"/>
+
+			<TextView
+				android:id="@+id/tvUnPayCount"
+				android:layout_width="14dp"
+				android:layout_height="14dp"
+				android:layout_alignRight="@+id/ivUnPay"
+				android:layout_alignTop="@+id/ivUnPay"
+				android:background="@drawable/shopsdk_default_dot_red_bg"
+				android:gravity="center"
+				android:text="1"
+				android:textColor="@color/select_tab"
+				android:textSize="@dimen/shopsdk_default_big_least_txt"
+				android:visibility="gone"/>
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/rlUnSeed"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1">
+
+			<ImageView
+				android:id="@+id/ivUnSeed"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_marginBottom="6dp"
+				android:layout_marginLeft="@dimen/shopsdk_default_small_padding"
+				android:layout_marginRight="@dimen/shopsdk_default_small_padding"
+				android:layout_marginTop="@dimen/shopsdk_default_common_padding"
+				android:padding="@dimen/shopsdk_default_smaller_padding"
+				android:src="@drawable/shopsdk_default_unsend"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/ivUnSeed"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="@dimen/shopsdk_default_least_padding"
+				android:text="@string/shopsdk_default_unSeed_order"
+
+				android:textColor="@color/black"
+				android:textSize="@dimen/shopsdk_default_smaller_txt"/>
+
+			<TextView
+				android:id="@+id/tvUnSeedCount"
+				android:layout_width="14dp"
+				android:layout_height="14dp"
+				android:layout_alignRight="@+id/ivUnSeed"
+				android:layout_alignTop="@+id/ivUnSeed"
+				android:background="@drawable/shopsdk_default_dot_red_bg"
+				android:gravity="center"
+				android:text="1"
+				android:textColor="@color/select_tab"
+				android:textSize="@dimen/shopsdk_default_big_least_txt"
+				android:visibility="gone"/>
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/rlUnShipping"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1">
+
+			<ImageView
+				android:id="@+id/ivUnShipping"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_margin="@dimen/shopsdk_default_small_padding"
+				android:padding="@dimen/shopsdk_default_smaller_padding"
+				android:src="@drawable/shopsdk_default_unship"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/ivUnShipping"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="@dimen/shopsdk_default_least_padding"
+				android:text="@string/shopsdk_default_unShipping_order"
+				android:textColor="@color/black"
+				android:textSize="@dimen/shopsdk_default_smaller_txt"/>
+
+			<TextView
+				android:id="@+id/tvUnShippingCount"
+				android:layout_width="14dp"
+				android:layout_height="14dp"
+				android:layout_alignRight="@+id/ivUnShipping"
+				android:layout_alignTop="@+id/ivUnShipping"
+				android:background="@drawable/shopsdk_default_dot_red_bg"
+				android:gravity="center"
+				android:text="1"
+				android:textColor="@color/select_tab"
+				android:textSize="@dimen/shopsdk_default_big_least_txt"
+				android:visibility="gone"/>
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/rlRefund"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1">
+
+			<ImageView
+				android:id="@+id/ivRefund"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_margin="@dimen/shopsdk_default_small_padding"
+				android:padding="@dimen/shopsdk_default_smaller_padding"
+				android:src="@drawable/shopsdk_default_refund"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/ivRefund"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="@dimen/shopsdk_default_least_padding"
+				android:text="@string/shopsdk_default_refund_aftersales"
+				android:textColor="@color/black"
+				android:textSize="@dimen/shopsdk_default_smaller_txt"/>
+
+			<TextView
+				android:id="@+id/tvRefundCount"
+				android:layout_width="14dp"
+				android:layout_height="14dp"
+				android:layout_alignRight="@+id/ivRefund"
+				android:layout_alignTop="@+id/ivRefund"
+				android:background="@drawable/shopsdk_default_dot_red_bg"
+				android:gravity="center"
+				android:text="1"
+				android:textColor="@color/select_tab"
+				android:textSize="@dimen/shopsdk_default_big_least_txt"
+				android:visibility="invisible"/>
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/rlMyOrders"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1">
+
+			<ImageView
+				android:id="@+id/ivAllOrder"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:layout_margin="@dimen/shopsdk_default_small_padding"
+				android:padding="@dimen/shopsdk_default_smaller_padding"
+				android:src="@drawable/shopsdk_default_allorder"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/ivAllOrder"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="@dimen/shopsdk_default_least_padding"
+				android:text="@string/shopsdk_default_allorder"
+				android:textColor="@color/black"
+				android:textSize="@dimen/shopsdk_default_smaller_txt"/>
+
+			<TextView
+				android:id="@+id/tvAllOrder"
+				android:layout_width="14dp"
+				android:layout_height="14dp"
+				android:layout_alignRight="@+id/ivAllOrder"
+				android:layout_alignTop="@+id/ivAllOrder"
+				android:background="@drawable/shopsdk_default_dot_red_bg"
+				android:gravity="center"
+				android:text="1"
+				android:textColor="@color/select_tab"
+				android:textSize="@dimen/shopsdk_default_big_least_txt"
+				android:visibility="invisible"/>
+		</RelativeLayout>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/shopsdk_default_common_padding"
+		android:background="@color/white"
+		android:orientation="vertical"
+		android:paddingLeft="@dimen/shopsdk_default_big_padding"
+		android:paddingRight="@dimen/shopsdk_default_big_padding">
+
+		<RelativeLayout
+			android:id="@+id/rlCoupon"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingBottom="@dimen/shopsdk_default_mine_top"
+			android:paddingTop="@dimen/shopsdk_default_mine_top">
+
+			<ImageView
+				android:id="@+id/ivCoupon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="@dimen/shopsdk_default_common_padding"
+				android:src="@drawable/shopsdk_default_coupon"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_toRightOf="@id/ivCoupon"
+				android:text="@string/shopsdk_default_coupon"
+				android:textColor="@color/black"
+				android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:src="@drawable/shopsdk_default_more"/>
+
+		</RelativeLayout>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="@color/grey_space"/>
+
+		<RelativeLayout
+			android:id="@+id/rlHelp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingBottom="@dimen/shopsdk_default_mine_top"
+			android:paddingTop="@dimen/shopsdk_default_mine_top">
+
+			<ImageView
+				android:id="@+id/ivHelp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="@dimen/shopsdk_default_common_padding"
+				android:src="@drawable/shopsdk_default_mine_help"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_toRightOf="@+id/ivHelp"
+				android:text="@string/shopsdk_default_help"
+				android:textColor="@color/black"
+				android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:src="@drawable/shopsdk_default_more"/>
+
+		</RelativeLayout>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="@color/grey_space"/>
+
+		<RelativeLayout
+			android:id="@+id/rlAbout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingBottom="@dimen/shopsdk_default_mine_top"
+			android:paddingTop="@dimen/shopsdk_default_mine_top">
+
+			<ImageView
+				android:id="@+id/ivAbout"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="@dimen/shopsdk_default_common_padding"
+				android:src="@drawable/shopsdk_default_mine_about"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_toRightOf="@+id/ivAbout"
+				android:text="@string/shopsdk_default_mine_about"
+				android:textColor="@color/black"
+				android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:src="@drawable/shopsdk_default_more"/>
+
+		</RelativeLayout>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="@color/grey_space"/>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+# Proguard ruls used by Shop-Demo
+# for ShopSDK/PaySDK
+-keep interface * {
+    *;
+}
+-keep class * extends java.lang.Throwable {
+	*;
+}
+-keep class * extends com.mob.tools.proguard.PublicMemberKeeper {
+	public *;
+}
+-keep class * extends com.mob.tools.proguard.ProtectedMemberKeeper {
+	protected *;
+}
+-keep class * extends com.mob.tools.proguard.EverythingKeeper {
+    *;
+}
+# for PaySDK
+-keep class * extends com.mob.tools.proguard.PrivateMemberKeeper {
+	private *;
+}
+# for ShopGUI（若不使用ShopGUI，则无需以下配置）
+-keep class com.mob.shop.gui.** {*;}
+# for USMSDK（若同时使用UMSSDK作为用户系统，则需要以下配置）
+-keep class com.mob.**{*;}
+-keep class cn.sharesdk.**{*;}
+-keep class cn.smssdk.**{*;}

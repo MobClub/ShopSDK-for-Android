@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="#f7f7f7">
+
+    <com.mob.shop.gui.themes.defaultt.components.TitleView
+        android:id="@+id/aboutMeTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shopsdk_default_header_height"/>
+
+    <ImageView
+        android:id="@+id/about_me_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/shopsdk_default_about_me_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/aboutMeTitleView"
+        android:layout_margin="40dp"/>
+
+    <TextView
+        android:id="@+id/about_me_descript"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shopsdk_default_about_me_description"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_below="@id/about_me_icon"/>
+
+    <RelativeLayout
+        android:id="@+id/about_me_version_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_below="@id/about_me_descript">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#c2c2c2"
+            android:textSize="14sp"
+            android:layout_alignParentLeft="true"
+            android:text="版权信息"/>
+        <ImageView
+            android:id="@+id/about_me_is_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/shopsdk_default_about_me_goto_detail"/>
+    </RelativeLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#CFCFD1"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_below="@id/about_me_version_title"/>
+    <RelativeLayout
+        android:id="@+id/about_me_version_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_below="@id/line">
+
+        <TextView
+            android:id="@+id/about_me_version_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#c2c2c2"
+            android:textSize="14sp"
+            android:layout_alignParentLeft="true"
+            android:text="v1.0.1"/>
+        <TextView
+            android:id="@+id/about_me_version_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#c2c2c2"
+            android:textSize="14sp"
+            android:layout_alignParentRight="true"
+            android:text="2017.11.14"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:textSize="12sp"
+        android:textColor="#c2c2c2"
+        android:layout_centerHorizontal="true"
+        android:text="上海游昆信息技术有限公司 \n Copyright © 2012 - 2017"/>
+
+
+</RelativeLayout>

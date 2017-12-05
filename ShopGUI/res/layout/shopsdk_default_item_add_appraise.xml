@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="@dimen/shopsdk_default_common_padding"
+		android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+		android:layout_marginTop="@dimen/shopsdk_default_common_padding"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<com.mob.tools.gui.AsyncImageView
+			android:id="@+id/ivLogo"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:scaleType="centerCrop"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:layout_marginLeft="@dimen/shopsdk_default_big_padding"
+			android:layout_marginRight="@dimen/shopsdk_default_big_padding"
+			android:text="商品评分"
+			android:textColor="@color/black"
+			android:textSize="14sp"/>
+
+		<RatingBar
+			android:id="@+id/ratBar"
+			style="@style/accessRatingBar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:numStars="5"
+			android:rating="0"
+			android:stepSize="1"/>
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:background="@color/grey_line"/>
+
+	<EditText
+		android:id="@+id/etAppraise"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@null"
+		android:gravity="top"
+		android:hint="@string/shopsdk_default_appriase_hint"
+		android:lines="5"
+		android:padding="@dimen/shopsdk_default_common_padding"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:textColor="@color/black"
+		android:textColorHint="@color/unselect_tab"
+		android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+	<com.mob.shop.gui.themes.defaultt.components.ExactGridView
+		android:id="@+id/gridView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:numColumns="4"/>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:layout_marginBottom="@dimen/shopsdk_default_common_padding"
+		android:background="@color/grey_line"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="@dimen/shopsdk_default_common_padding"
+		android:paddingRight="@dimen/shopsdk_default_common_padding"
+		android:layout_marginBottom="@dimen/shopsdk_default_common_padding"
+		>
+
+		<CheckBox
+			android:id="@+id/checkBox"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:button="@drawable/shopsdk_default_checkbox_style"
+			android:checked="true"
+			android:gravity="center_vertical"
+			android:padding="@dimen/shopsdk_default_smaller_padding"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:textColor="@color/black"
+			android:textSize="@dimen/shopsdk_default_small_txt"
+			android:layout_toRightOf="@+id/checkBox"
+			android:text="@string/shopsdk_default_anonymity"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:textColor="@color/unselect_tab"
+			android:textSize="@dimen/shopsdk_default_small_txt"
+			android:text="@string/shopsdk_default_anonymity_tip"/>
+	</RelativeLayout>
+</LinearLayout>

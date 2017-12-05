@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="umssdk_constellation_aquarius">Aquarius</string>
+	<string name="umssdk_constellation_aries">Aries</string>
+	<string name="umssdk_constellation_cancer">Cancer</string>
+	<string name="umssdk_constellation_capricorn">Capricorn</string>
+	<string name="umssdk_constellation_gemini">Gemini</string>
+	<string name="umssdk_constellation_leo">Leo</string>
+	<string name="umssdk_constellation_libra">Libra</string>
+	<string name="umssdk_constellation_pisces">Pisces</string>
+	<string name="umssdk_constellation_sagittarius">Sagittarius</string>
+	<string name="umssdk_constellation_scorpio">Scorpio</string>
+	<string name="umssdk_constellation_taurus">Taurus</string>
+	<string name="umssdk_constellation_virgo">Virgo</string>
+</resources>

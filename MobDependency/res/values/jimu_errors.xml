@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="jimu_error_n1">未知错误</string>
+	<string name="jimu_error_n2">返回体长度错误</string>
+
+	<string name="jimu_error_401">请求缺少必要参数</string>
+	<string name="jimu_error_402">请求参数错误</string>
+	<string name="jimu_error_403">请求参数不完整</string>
+	<string name="jimu_error_404">数据解密失败</string>
+	<string name="jimu_error_405">数据校验失败</string>
+	<string name="jimu_error_406">通信会话已过期</string>
+	<string name="jimu_error_407">非法请求</string>
+	<string name="jimu_error_408">秘钥失效</string>
+	<string name="jimu_error_409">文件|图片大小超出限制</string>
+	<string name="jimu_error_410">文件|图片格式非法</string>
+	<string name="jimu_error_501">服务端未知异常</string>
+	<string name="jimu_error_502">数据获取失败</string>
+	<string name="jimu_error_503">数据存储失败</string>
+	<string name="jimu_error_504">服务端繁忙</string>
+	<string name="jimu_error_505">请求的服务不支持</string>
+	<string name="jimu_error_506">数据加密失败</string>
+	<string name="jimu_error_507">图片|文件存储失败</string>
+</resources>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/grey_space"
+              android:orientation="vertical">
+
+	<com.mob.shop.gui.themes.defaultt.components.TitleView
+		android:id="@+id/titleView"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/shopsdk_default_header_height"/>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:scrollbars="none">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<com.mob.shop.gui.themes.defaultt.components.OrderProductView
+				android:id="@+id/orderProductView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/white"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingBottom="@dimen/shopsdk_default_common_padding"
+				android:paddingLeft="@dimen/shopsdk_default_big_padding"
+				android:paddingRight="@dimen/shopsdk_default_big_padding"
+				android:paddingTop="@dimen/shopsdk_default_common_padding"
+				android:text="@string/shopsdk_default_refund_tip"
+				android:textColor="@color/orange_price"
+				android:textSize="@dimen/shopsdk_default_smaller_txt"/>
+
+			<com.mob.shop.gui.themes.defaultt.components.SingleChoiceView
+				android:id="@+id/refundTypeView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/white"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				/>
+			<com.mob.shop.gui.themes.defaultt.components.SingleChoiceView
+				android:id="@+id/refundReasonView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/white"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				/>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/shopsdk_default_common_padding"
+				android:background="@color/white"
+				android:orientation="horizontal"
+				android:paddingLeft="@dimen/shopsdk_default_big_padding"
+				android:paddingRight="@dimen/shopsdk_default_big_padding">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/shopsdk_default_refund_sum"
+					android:textColor="@color/black"
+					android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/shopsdk_default_bigest_padding"
+					android:layout_marginRight="@dimen/shopsdk_default_smaller_padding"
+					android:text="￥"
+					android:textColor="@color/orange_price"
+					android:textSize="@dimen/shopsdk_default_small_txt"/>
+
+				<EditText
+					android:id="@+id/etBuyerMessage"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@null"
+					android:hint="@string/shopsdk_default_input_money_hint"
+					android:inputType="number|numberDecimal"
+					android:paddingBottom="@dimen/shopsdk_default_big_padding"
+					android:paddingTop="@dimen/shopsdk_default_big_padding"
+					android:textColor="@color/unselect_tab"
+					android:textColorHint="@color/unselect_tab"
+					android:textSize="@dimen/shopsdk_default_small_txt"/>
+			</LinearLayout>
+
+			<TextView
+				android:id="@+id/tvTip"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingBottom="@dimen/shopsdk_default_common_padding"
+				android:paddingLeft="@dimen/shopsdk_default_big_padding"
+				android:paddingRight="@dimen/shopsdk_default_big_padding"
+				android:paddingTop="@dimen/shopsdk_default_common_padding"
+				android:text="最多￥200.00,含运费￥0.00"
+				android:textColor="@color/unselect_tab"
+				android:textSize="@dimen/shopsdk_default_smaller_txt"/>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="1px"
+				android:background="@color/white"
+				android:orientation="horizontal"
+				android:paddingLeft="@dimen/shopsdk_default_big_padding"
+				android:paddingRight="@dimen/shopsdk_default_big_padding">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/shopsdk_default_refund_explain"
+					android:textColor="@color/black"
+					android:textSize="@dimen/shopsdk_default_common_txt"/>
+
+				<EditText
+					android:id="@+id/etRefundExplain"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/shopsdk_default_bigest_padding"
+					android:background="@null"
+					android:hint="@string/shopsdk_default_refund_reason_hint"
+					android:paddingBottom="@dimen/shopsdk_default_big_padding"
+					android:paddingTop="@dimen/shopsdk_default_big_padding"
+					android:maxLength="200"
+					android:textColor="@color/unselect_tab"
+					android:textColorHint="@color/unselect_tab"
+					android:textSize="@dimen/shopsdk_default_small_txt"/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/shopsdk_default_common_padding"
+				android:background="@color/white"
+				android:orientation="vertical"
+				android:padding="@dimen/shopsdk_default_big_padding">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textColor="@color/black"
+					android:textSize="@dimen/shopsdk_default_common_txt"
+					android:text="@string/shopsdk_default_upload_img"/>
+
+				<com.mob.shop.gui.themes.defaultt.components.ExactGridView
+					android:id="@+id/gridView"
+					android:layout_width="match_parent"
+					android:numColumns="4"
+					android:layout_height="wrap_content"/>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+
+	<TextView
+		android:id="@+id/tvCommit"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:background="@drawable/shopsdk_default_title_bg"
+		android:gravity="center"
+		android:paddingBottom="@dimen/shopsdk_default_small_big_padding"
+		android:paddingTop="@dimen/shopsdk_default_small_big_padding"
+		android:text="@string/shopsdk_default_commit"
+		android:textColor="@color/white"
+		android:textSize="@dimen/shopsdk_default_small_big_txt"/>
+</LinearLayout>

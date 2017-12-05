@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rlRoot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey_space"
+                android:orientation="vertical">
+
+	<com.mob.shop.gui.themes.defaultt.components.TitleView
+		android:id="@+id/titleView"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"/>
+
+	<TextView
+		android:id="@+id/tvAdd"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:background="@drawable/shopsdk_default_title_bg"
+		android:gravity="center"
+		android:paddingBottom="@dimen/shopsdk_default_small_big_padding"
+		android:paddingTop="@dimen/shopsdk_default_small_big_padding"
+		android:text="@string/shopsdk_default_save"
+		android:textColor="@color/white"
+		android:textSize="@dimen/shopsdk_default_small_big_txt"/>
+
+	<View
+		android:id="@+id/line"
+		android:layout_width="match_parent"
+		android:layout_height="1px"
+		android:layout_above="@+id/tvAdd"
+		android:background="@color/grey_line"/>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/titleView"
+		android:scrollbars="none">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+
+			<LinearLayout
+				android:id="@+id/llShippingName"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/white"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:paddingLeft="@dimen/shopsdk_default_big_padding"
+				android:paddingRight="@dimen/shopsdk_default_big_padding">
+
+				<TextView
+					android:layout_width="@dimen/shopsdk_default_cartimg_height"
+					android:layout_height="wrap_content"
+					android:paddingBottom="@dimen/shopsdk_default_small_big_padding"
+					android:paddingTop="@dimen/shopsdk_default_small_big_padding"
+					android:text="@string/shopsdk_default_shippingName"
+					android:textColor="@color/black"
+					android:textSize="@dimen/shopsdk_default_small_txt"/>
+
+				<EditText
+					android:id="@+id/etShippingName"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:background="@null"
+					android:maxLength="20"
+					android:paddingRight="@dimen/shopsdk_default_small_padding"
+					android:singleLine="true"
+					android:textColor="@color/black"
+					android:textSize="@dimen/shopsdk_default_small_txt"
+				    android:hint="@string/shopsdk_default_input_shipping_name_hint"
+					/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/llShippingPhone"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/llShippingName"
+				android:layout_marginTop="1dp"
+				android:background="@color/white"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:paddingLeft="@dimen/shopsdk_default_big_padding"
+				android:paddingRight="@dimen/shopsdk_default_big_padding">
+
+				<TextView
+					android:layout_width="@dimen/shopsdk_default_cartimg_height"
+					android:layout_height="wrap_content"
+					android:paddingBottom="@dimen/shopsdk_default_small_big_padding"
+					android:paddingTop="@dimen/shopsdk_default_small_big_padding"
+					android:text="@string/shopsdk_default_shippingPhone"
+					android:textColor="@color/black"
+					android:textSize="@dimen/shopsdk_default_small_txt"/>
+
+				<EditText
+					android:id="@+id/etPhone"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:background="@null"
+					android:inputType="phone"
+					android:maxLength="11"
+					android:hint="@string/shopsdk_default_input_shipping_phone_hint"
+					android:paddingRight="@dimen/shopsdk_default_small_padding"
+					android:textColor="@color/black"
+					android:textSize="@dimen/shopsdk_default_small_txt"
+					/>
+
+			</LinearLayout>
+
+			<com.mob.shop.gui.themes.defaultt.components.SingleChoiceView
+				android:id="@+id/llShippingArea"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/llShippingPhone"
+				android:layout_marginTop="1dp"
+				android:background="@color/white"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				/>
+
+			<LinearLayout
+				android:id="@+id/llShippingAddress"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/llShippingArea"
+				android:layout_marginTop="1dp"
+				android:background="@color/white"
+				android:orientation="horizontal"
+				android:paddingBottom="@dimen/shopsdk_default_small_big_padding"
+				android:paddingLeft="@dimen/shopsdk_default_big_padding"
+				android:paddingTop="@dimen/shopsdk_default_small_big_padding"
+				>
+
+				<TextView
+					android:layout_width="@dimen/shopsdk_default_cartimg_height"
+					android:layout_height="wrap_content"
+					android:text="@string/shopsdk_default_shippingAddress"
+					android:textColor="@color/black"
+					android:textSize="@dimen/shopsdk_default_small_txt"/>
+
+				<EditText
+					android:id="@+id/etAddress"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginRight="@dimen/shopsdk_default_big_padding"
+					android:background="@null"
+					android:ellipsize="start"
+					android:gravity="top"
+					android:inputType="textMultiLine"
+					android:lines="3"
+					android:maxLength="60"
+					android:hint="@string/shopsdk_default_input_shipping_address_hint"
+					android:textColor="@color/black"
+					android:textSize="@dimen/shopsdk_default_small_txt"
+					/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/llShippingHint"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/llShippingAddress"
+				android:layout_marginTop="10dp"
+				android:background="@color/white"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:paddingRight="@dimen/shopsdk_default_big_padding"
+				android:paddingLeft="@dimen/shopsdk_default_big_padding"
+				android:paddingTop="@dimen/shopsdk_default_common_padding"
+				android:paddingBottom="@dimen/shopsdk_default_common_padding">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="@string/shopsdk_default_settinghint"
+					android:textColor="@color/black"
+					android:textSize="@dimen/shopsdk_default_small_txt"/>
+				<ToggleButton
+					android:id="@+id/togglebutton"
+					style="@style/MyToggleButton"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@color/transparent"
+					android:checked="true"
+					android:textOff=""
+					android:textOn=""/>
+			</LinearLayout>
+
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>
