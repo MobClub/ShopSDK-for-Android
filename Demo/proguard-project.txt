@@ -1,3 +1,4 @@
+-dontwarn
 # for ShopSDK/ShopGUI/PaySDK
 -keep class com.mob.**{*;}
 # for USMSDK（若同时使用UMSSDK作为用户系统，则需要以下配置）

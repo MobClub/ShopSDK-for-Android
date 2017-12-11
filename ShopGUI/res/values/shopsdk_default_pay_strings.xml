@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="dialog_pay_fail">支付失败，请稍后再试</string>
-   <!-- <string name="shopsdk_default_pay_account_show">支付总金额<font color="#FB7E41">%s</font>元</string>-->
-    <string name="shopsdk_default_pay_account_show"><![CDATA[<font color="#000000">支付总金额</font><font color="#FB7E41">%1$s</font><font color="#000000">元</font>]]> </string>
-</resources>

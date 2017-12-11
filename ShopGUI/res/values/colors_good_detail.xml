@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="goods_item_text_normal">#ff8000</color>
-    <color name="goods_item_text_selected">#ffffff</color>
-    <color name="goods_item_btn_bg_normal">#ffffff</color>
-    <color name="goods_item_btn_bg_selected">#ff8000</color>
-    <color name="goods_item_btn_bg_border">@color/goods_item_btn_bg_selected</color>
-</resources>
