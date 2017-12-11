@@ -2,7 +2,6 @@ package com.mob.shop.demo;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.widget.Toast;
 
 import com.mob.MobSDK;
@@ -13,7 +12,6 @@ import com.mob.ums.UMSSDK;
 import com.mob.ums.User;
 import com.mob.ums.gui.UMSGUI;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MainActivity extends Activity {
@@ -25,6 +23,7 @@ public class MainActivity extends Activity {
 		final Callback callback = new Callback() {
 			@Override
 			public void login() {
+				// 跳转开发者应用的登录界面，等待用户进行登录操作，登录成功后调用MobSDK.setUser设置登录用户信息
 				UMSGUI.showLogin(new com.mob.ums.OperationCallback<User>() {
 					@Override
 					public void onSuccess(User user) {
@@ -45,6 +44,7 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void logout() {
+				// 跳转开发者应用的退出登录界面，等待用户进行退出操作，退出成功后调用MobSDK.clearUser清除用户信息
 				UMSSDK.logout(new OperationCallback<Void>() {
 					@Override
 					public void onSuccess(Void aVoid) {
@@ -61,24 +61,23 @@ public class MainActivity extends Activity {
 			}
 		};
 
-
-		final String userToken = UMSSDK.getLoginUserToken();
-		if (!TextUtils.isEmpty(userToken)) {
-			UMSSDK.getUserListByIDs(new String[]{UMSSDK.getLoginUserId()}, new OperationCallback<ArrayList<User>>() {
+		/* ShopSDK/ShopGUI不提供用户信息的持久化缓存，开发者需自行实现，
+		 * 建议每次启动应用时，获取当前用户信息并调用MobSDK.setUser设置给ShopSDK，若不设置，
+		 * 当前用户将处于匿名状态，除“查看商品”、“添加购物车”等个别功能外，其他功能不可用
+		 */
+		if (UMSSDK.amILogin()) {
+			UMSSDK.getLoginUser(new OperationCallback<User>() {
 				@Override
-				public void onSuccess(ArrayList<User> users) {
-					super.onSuccess(users);
-					if (users != null && !users.isEmpty()) {
-						MobSDK.setUser(users.get(0).id.get(), users.get(0).nickname.get(), !users.get(0).avatar.isNull() ? users.get(0).avatar.get
-								()[0] : "", new HashMap<String, Object>());
-					}
-				}
-				@Override
-				public void onFailed(Throwable throwable) {
-					super.onFailed(throwable);
+				public void onSuccess(User user) {
+					String id = user.id.get();
+					String nickname = user.nickname.get();
+					String avatar = user.avatar.get()[0];
+					MobSDK.setUser(id, nickname, avatar, null);
 				}
 			});
 		}
+
+		// 进入商城首页
 		ShopGUI.showShopPage(callback);
 		finish();
 	}
