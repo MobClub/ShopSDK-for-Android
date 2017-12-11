@@ -52,25 +52,25 @@
     <SinaWeibo
         Id="1"
         SortId="1"
-        AppKey="1065584115"
-        AppSecret="ca6260e975e1ccd0787216f12adf7de6"
-        RedirectUrl="http://cmssdk.mob.com"
+        AppKey="4239321078"
+        AppSecret="afe03fcc65823ebc0c0598ee8bf1aed1"
+        RedirectUrl="http://www.mob.com/"
         ShareByAppClient="true"
         Enable="true" />
 
     <TencentWeibo
         Id="2" 
         SortId="2"
-        AppKey="801307650"
-        AppSecret="ae36f4ee3946e1cbb98d6965b0b2ff5c"
-        RedirectUri="http://sharesdk.cn"
+		AppKey="801307650"
+		AppSecret="ae36f4ee3946e1cbb98d6965b0b2ff5c"
+		RedirectUri="http://sharesdk.cn"
         Enable="true" />
     
     <QZone
         Id="3"
         SortId="3"
-        AppId="1106255273"
-        AppKey="BGyUOnkOROW8IFid"
+		AppId="1106567018"
+		AppKey="KAQBQAUJcI9SoYeZ"
         Enable="true" />
     
     <!-- 
@@ -88,41 +88,41 @@
     <Wechat
         Id="4"
         SortId="4"
-        AppId="wxb4de64c75a0924bf"
-        AppSecret="c57c9b8cd22383612e79d1881c3f9942"
+        AppId="wx6c033dfc1026e3cb"
+        AppSecret="7bdc1d0777b3344f353d9acc54e75713"
         BypassApproval="false"
         Enable="true" />
     
     <WechatMoments
         Id="5"
         SortId="5"
-        AppId="wxb4de64c75a0924bf"
-        AppSecret="c57c9b8cd22383612e79d1881c3f9942"
+		AppId="wx6c033dfc1026e3cb"
+		AppSecret="7bdc1d0777b3344f353d9acc54e75713"
         BypassApproval="false"
         Enable="true" />
         
 	<WechatFavorite
         Id="6"
         SortId="6"
-        AppId="wxb4de64c75a0924bf"
-        AppSecret="c57c9b8cd22383612e79d1881c3f9942"
+		AppId="wx6c033dfc1026e3cb"
+		AppSecret="7bdc1d0777b3344f353d9acc54e75713"
         Enable="true" />
     
 	<!-- ShareByAppClient标识是否使用微博客户端分享，默认是false -->
 	<QQ
         Id="7"
         SortId="7"
-        AppId="1106255273"
-        AppKey="BGyUOnkOROW8IFid"
+		AppId="1106567018"
+		AppKey="KAQBQAUJcI9SoYeZ"
         ShareByAppClient="true"
         Enable="true" />
     
     <Facebook
         Id="8"
         SortId="8"
-        ConsumerKey="1379808742089028"
-        ConsumerSecret="e3178d696f65f2ed8e544a85df0ba63a"
-        RedirectUrl="https://mob.com"
+		ConsumerKey="1412473428822331"
+		ConsumerSecret="a42f4f3f867dc947b9ed6020c2e93558"
+		RedirectUrl="https://mob.com"
 		ShareByAppClient="true"
 		Enable="true" />
 
