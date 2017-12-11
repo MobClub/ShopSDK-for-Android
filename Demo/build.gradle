@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+// 添加插件
+apply plugin: 'com.mob.sdk'
 
 android {
     compileSdkVersion findCompileSdkVersion()
@@ -6,7 +8,7 @@ android {
 
     defaultConfig {
         minSdkVersion findMinSdkVersionFromManifest()
-        targetSdkVersion findTargetSdkVersionFromManifest()   //target SdkVersion >= 23 make miui crash
+        targetSdkVersion findTargetSdkVersionFromManifest()
         versionCode findVersionCode()
         versionName findVersionName()
     }
@@ -54,13 +56,53 @@ android {
     }
 }
 
+// 在MobSDK的扩展中注册ShopSDK的相关信息
+MobSDK {
+    appKey "moba6b6c6d6"
+    appSecret "b89d2427a3bc7ad1aea1e1e8c1d36bf3"
+
+    ShopSDK {
+        gui true    // 若不使用ShopGUI，设置为false
+    }
+
+    // ShopSDK依赖于PaySDK，故还需要引入PaySDK
+    PaySDK {}
+
+    // Demo使用UMSSDK作为账号系统，故需要引入UMSSDK（若不使用UMSSDK，则不需要引入）
+    UMSSDK {}
+
+    // UMSSDK依赖于ShareSDK和SMSSDK，故还需要引入这两个SDK（若不使用UMSSDK，则不需要引入）
+    ShareSDK {
+        gui false
+        devInfo {
+            SinaWeibo {
+                appKey "4239321078"
+                appSecret "afe03fcc65823ebc0c0598ee8bf1aed1"
+                callbackUri "http://www.mob.com"
+                shareByAppClient false
+            }
+            Wechat {
+                appId "wx6c033dfc1026e3cb"
+                appSecret "7bdc1d0777b3344f353d9acc54e75713"
+            }
+            QQ {
+                appId "1106567018"
+                appKey "KAQBQAUJcI9SoYeZ"
+            }
+            Facebook {
+                appKey "1412473428822331"
+                appSecret "a42f4f3f867dc947b9ed6020c2e93558"
+                callbackUri "https://mob.com"
+            }
+        }
+    }
+    SMSSDK {
+        gui false
+    }
+}
+
 dependencies {
-    // 若使用GUI，添加此依赖（不再需要单独添加ShopSDK的依赖）
-    compile project(':ShopGUI')
-    // 若不使用GUI，添加此依赖（不再需要添加ShopGUI的依赖）
-    // compile project(':ShopSDK')
-    // 若使用UMSSDK作为帐号系统，添加此依赖（UMSSDK请至Mob官网下载）
-    compile project(':UMSSDK')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 int findCompileSdkVersion() {
