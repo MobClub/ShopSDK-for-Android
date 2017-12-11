@@ -1,2 +1,2 @@
 # for ShopGUI
--keep class com.mob.shop.gui.** {*;}
+-keep class com.mob.**{*;}
