@@ -61,12 +61,9 @@ MobSDK {
     appKey "moba6b6c6d6"
     appSecret "b89d2427a3bc7ad1aea1e1e8c1d36bf3"
 
-    ShopSDK {
-        gui true    // 若不使用ShopGUI，设置为false
-    }
-
     // ShopSDK依赖于PaySDK，故还需要引入PaySDK
     PaySDK {}
+    ShopSDK {}
 
     // Demo使用UMSSDK作为账号系统，故需要引入UMSSDK（若不使用UMSSDK，则不需要引入）
     UMSSDK {}
