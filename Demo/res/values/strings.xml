@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">ShopDemo</string>
-	<string name="goto_shop_a">匿名进入商城</string>
-	<string name="goto_shop_u">非匿名进入商城</string>
+	<string name="shop_demo_main_ignore">跳过</string>
+	<string name="shop_demo_main_shopsdk">ShopSDK</string>
+	<string name="shop_demo_main_mobpay">Demo支付设置为MobPay支付</string>
+	<string name="shop_demo_main_customizedpay">Demo支付设置为开发者自有收银台支付</string>
 </resources>

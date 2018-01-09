@@ -61,7 +61,7 @@ MobSDK {
     appKey "moba6b6c6d6"
     appSecret "b89d2427a3bc7ad1aea1e1e8c1d36bf3"
 
-    // ShopSDK依赖于PaySDK，故还需要引入PaySDK
+    // 若使用ShopSDK内置的支付方式，需同时引入PaySDK；若使用开发者自有的支付方式，则不需要PaySDK
     PaySDK {}
     ShopSDK {}
 
@@ -100,6 +100,8 @@ MobSDK {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    // 微信SDK(含统计功能版)
+    provided 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
 }
 
 int findCompileSdkVersion() {

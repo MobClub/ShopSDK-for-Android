@@ -2,18 +2,53 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical">
-
-	<!--<Button-->
-		<!--android:id="@+id/btn1"-->
-		<!--android:layout_width="match_parent"-->
-		<!--android:layout_height="50dp"-->
-		<!--android:text="@string/goto_shop_a"/>-->
-
-	<!--<Button-->
-		<!--android:id="@+id/btn2"-->
-		<!--android:layout_width="match_parent"-->
-		<!--android:layout_height="50dp"-->
-		<!--android:text="@string/goto_shop_u"/>-->
-
+              android:orientation="vertical"
+			  android:background="@drawable/shop_demo_main_bg">
+	<TextView
+		android:id="@+id/shop_demo_ignore_tv"
+		android:layout_width="60dp"
+		android:layout_height="28dp"
+		android:layout_gravity="end"
+		android:gravity="center"
+		android:layout_marginRight="20dp"
+		android:layout_marginTop="20dp"
+		android:text="@string/shop_demo_main_ignore"
+		android:textColor="#FFFFFF"
+		android:textSize="14sp"
+		android:background="@drawable/shop_demo_round_line"/>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginTop="70dp"
+		android:text="@string/shop_demo_main_shopsdk"
+		android:textColor="#FFFFFF"
+		android:textSize="36sp"
+		android:textStyle="bold"/>
+	<TextView
+		android:id="@+id/shop_demo_mobpay_tv"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:layout_marginRight="40dp"
+		android:layout_marginLeft="40dp"
+		android:layout_marginTop="70dp"
+		android:text="@string/shop_demo_main_mobpay"
+		android:textColor="#FFFFFF"
+		android:textSize="14sp"
+		android:background="@drawable/shop_demo_round_line"/>
+	<TextView
+		android:id="@+id/shop_demo_customizedpay_tv"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:layout_marginRight="40dp"
+		android:layout_marginLeft="40dp"
+		android:layout_marginTop="70dp"
+		android:text="@string/shop_demo_main_customizedpay"
+		android:textColor="#FFFFFF"
+		android:textSize="14sp"
+		android:background="@drawable/shop_demo_round_line"/>
 </LinearLayout>
